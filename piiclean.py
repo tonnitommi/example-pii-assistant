@@ -1,6 +1,6 @@
 from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
-import os
+import spacy
 
 DEFAULT_ANOYNM_ENTITIES = [
     "CREDIT_CARD",
@@ -12,9 +12,10 @@ DEFAULT_ANOYNM_ENTITIES = [
     "PHONE_NUMBER"
 ]
 
-class piiclean():
+class piiclean:
     def __init__(self):
-        os.system("spacy download en_core_web_lg")
+        #self._language_set = False
+        spacy.load("en_core_web_lg")
         self.analyzer = AnalyzerEngine()
         self.anomizer = AnonymizerEngine()
 
