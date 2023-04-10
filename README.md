@@ -7,11 +7,11 @@ This uses a very basic configuration of [Microsoft Presidio](https://microsoft.g
 and only works in English as of now. The expansion possibilities are endless, including writing
 custom recognizers.
 
-If your input is for example:
+If your input is for example
 
 `I am Draco Malfoy and my phone number is +358 666 1234 and email is draco@hogwarts.edu.`
 
-it will become:
+it will become
 
 `I am <PERSON> and my phone number is <PHONE_NUMBER> and email is <EMAIL_ADDRESS>`
 
