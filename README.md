@@ -13,7 +13,7 @@ If your input is for example:
 
 it will become:
 
-> I am <PERSON> and my phone number is <PHONE_NUMBER> and email is <EMAIL_ADDRESS>.
+> I am <PERSONNAME> and my phone number is <PHONE_NUMBER> and email is <EMAIL_ADDRESS>.
 
 Note that the first time Assistant runs, it will need to download the spaCy language pack,
 which will take some time.
