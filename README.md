@@ -9,7 +9,7 @@ If your input is for example
 
 it will become
 
-`I am <PERSON> and my phone number is <PHONE_NUMBER> and email is <EMAIL_ADDRESS>`
+`I am <PERSON> and my phone number is <PHONE_NUMBER> and email is <EMAIL_ADDRESS>.`
 
 This is how it looks in real life:
 
