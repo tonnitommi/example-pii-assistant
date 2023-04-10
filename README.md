@@ -1,11 +1,8 @@
-# Template: Simple Assistant Robot
+#  Example: Anonymize PII data using Microsoft Presidio
 
-The template leverages the RPA.Assistant package to provide the UI functionality. The template shows the different components available in the new library and the basic structure to help you get going.
+This example starts a simple Robocorp Assistant with only one text input. Write anything in,
+and in the next view the PII data has been replaced with placeholders.
 
-More about [attended vs. unattended robots](https://robocorp.com/docs/control-room/attended-or-unattended) and specifically [attended automations](https://robocorp.com/docs/control-room/attended)
-
-## Learning materials
-
-- [Robocorp Developer Training Courses](https://robocorp.com/docs/courses)
-- [Documentation links on Robot Framework](https://robocorp.com/docs/languages-and-frameworks/robot-framework)
-- [Example bots in Robocorp Portal](https://robocorp.com/portal)
+This uses a very basic configuration of [Microsoft Presidio](https://microsoft.github.io/presidio/)
+and only works in English as of now. The expansion possibilities are endless, including writing
+custom recognizers.

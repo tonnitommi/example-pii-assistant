@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation       Ask for a text in Assistant and check if it contains
-...                 PII data using MS Presidio.
+Documentation       Ask for a text in Assistant and anonymize
+...                 using Microsoft Presidio.
 
 Library             OperatingSystem
 Library             RPA.Assistant
@@ -23,23 +23,18 @@ Main
 *** Keywords ***
 Display Main Menu
     [Documentation]
-    ...    Main UI of the bot. We use the "Back To Main Menu" keyword
-    ...    with buttons to make other views return here.
+    ...    Main UI of the bot. Just a header, input and button.
     Clear Dialog
     Add Heading    PII detector
     Add Text Input    name=text_input    label=Write some text here
     Add Next Ui Button    Submit     Test For Pii
 
 Test For Pii
+    [Documentation]
+    ...    Runs the PII anonymization and updates the dialog view.
     [Arguments]   ${form}
 
-    ${analysis}=    PiiCheck.Predict   ${form}[text_input]
-
-    Log To Console    ${analysis}
-
     ${anonymized}=    PiiCheck.Anonymize   ${form}[text_input]
-
-    Log To Console    ${anonymized}
 
     Clear Dialog
     Add Heading    Result
