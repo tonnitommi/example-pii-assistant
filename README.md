@@ -13,8 +13,7 @@ it will become
 
 This is how it looks in real life:
 
-https://user-images.githubusercontent.com/40179958/230952522-77626032-87b5-43fb-935e-f055297e809c.mp4
-
+[![Screencast of PII anonymization](http://img.youtube.com/vi/yrmXPqtvlDw/0.jpg)](http://www.youtube.com/watch?v=yrmXPqtvlDw "Robocorp Portal: PII anonymizer Assistant Example")
 
 The example uses a very basic configuration of [Microsoft Presidio](https://microsoft.github.io/presidio/)
 and only works in English as of now. The expansion possibilities are endless, including writing
