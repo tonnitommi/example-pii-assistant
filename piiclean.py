@@ -14,7 +14,6 @@ DEFAULT_ANOYNM_ENTITIES = [
 
 class piiclean:
     def __init__(self):
-        #self._language_set = False
         spacy.load("en_core_web_lg")
         self.analyzer = AnalyzerEngine()
         self.anomizer = AnonymizerEngine()

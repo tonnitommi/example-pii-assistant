@@ -4,6 +4,7 @@ Documentation       Ask for a text in Assistant and anonymize
 
 Library             OperatingSystem
 Library             RPA.Assistant
+Library             RPA.Desktop
 Library             piiclean    WITH NAME    PiiCheck
 
 
@@ -15,7 +16,7 @@ Main
 
     Display Main Menu
     ${result}=    RPA.Assistant.Run Dialog
-    ...    title=Assistant Template
+    ...    title=PII anonymizateur example
     ...    on_top=True
     ...    height=450
 
@@ -26,7 +27,7 @@ Display Main Menu
     ...    Main UI of the bot. Just a header, input and button.
     Clear Dialog
     Add Heading    PII detector
-    Add Text Input    name=text_input    label=Write some text here
+    Add Text Input    name=text_input    label=Write some text here    minimum_rows=2
     Add Next Ui Button    Submit     Test For Pii
 
 Test For Pii
