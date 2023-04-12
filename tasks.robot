@@ -29,13 +29,18 @@ Display Main Menu
     Add Heading    PII detector
     Add Text Input    name=text_input    label=Write some text here    minimum_rows=2
     Add Next Ui Button    Submit     Test For Pii
+    Add Submit Buttons    buttons=Close    default=Close
 
 Test For Pii
     [Documentation]
     ...    Runs the PII anonymization and updates the dialog view.
     [Arguments]   ${form}
 
-    ${anonymized}=    PiiCheck.Anonymize   ${form}[text_input]
+    TRY
+        ${anonymized}=    PiiCheck.Anonymize   ${form}[text_input]
+    EXCEPT    AS    ${error_message}
+        ${anonymized}=    Set Variable    Error: ${error_message}
+    END
 
     Clear Dialog
     Add Heading    Result
